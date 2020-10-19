@@ -8,15 +8,27 @@
         <servlet-name>HelloServlet</servlet-name>
         <servlet-class>servlet.HelloServlet</servlet-class>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>HelloServlet</servlet-name>
-        <url-pattern>/hello</url-pattern>
-    </servlet-mapping>
 
     <servlet>
         <servlet-name>HiServlet</servlet-name>
         <servlet-class>servlet.HiServlet</servlet-class>
     </servlet>
+
+    <servlet>
+        <servlet-name>GreetingServlet</servlet-name>
+        <servlet-class>servlet.GreetingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GreetingServlet</servlet-name>
+        <url-pattern>/greeting</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>HiServlet</servlet-name>
         <url-pattern>/hi</url-pattern>
