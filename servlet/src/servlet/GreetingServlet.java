@@ -13,10 +13,12 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class GreetingServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        super.doPost(request, response);
         System.out.println("GreetingServlet-doPost");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        super.doGet(request, response);
         System.out.println("GreetingServlet-doGet");
     }
 }
