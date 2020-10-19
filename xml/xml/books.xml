@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+文档声明
+version: XML的版本
+encoding: 此文件的编码集
+-->
+
+<!--XML可以用来保存数据，且数据有自我描述性-->
+<books> <!--很多图书-->
+    <book isbn="978-7-5442-7772-3"> <!--有ISBN号的图书-->
+        <name>时生</name> <!--名称-->
+        <author>东野圭吾</author> <!--作者-->
+        <price>39.50</price> <!--价格-->
+    </book>
+</books>
