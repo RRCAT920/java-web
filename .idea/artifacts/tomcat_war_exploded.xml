@@ -13,6 +13,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="tomcat" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="commons-beanutils-1.8.0" module-name="tomcat" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/tomcat/target/tomcat-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
