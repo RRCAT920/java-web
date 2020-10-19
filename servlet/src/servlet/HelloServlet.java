@@ -22,6 +22,10 @@ public class HelloServlet implements Servlet {
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
         System.out.println("Life cycle 1: init");
+        System.out.println("别名: " + servletConfig.getServletName());
+        System.out.println("用户名: " + servletConfig.getInitParameter("username"));
+        System.out.println("统一资源定位符: " + servletConfig.getInitParameter("url"));
+        System.out.println(servletConfig.getServletContext());
     }
 
     @Override
