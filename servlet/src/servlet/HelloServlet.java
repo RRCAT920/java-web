@@ -14,9 +14,13 @@ import javax.servlet.ServletResponse;
  */
 public class HelloServlet implements Servlet {
 
+    public HelloServlet() {
+        System.out.println("Life cycle 0: ctor");
+    }
+
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
-
+        System.out.println("Life cycle 1: init");
     }
 
     @Override
@@ -27,7 +31,8 @@ public class HelloServlet implements Servlet {
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse)
             throws ServletException, IOException {
-        System.out.println("HelloServlet程序被访问");
+        System.out.println("Life cycle 2: service");
+//        System.out.println("HelloServlet程序被访问");
     }
 
     @Override
@@ -37,6 +42,6 @@ public class HelloServlet implements Servlet {
 
     @Override
     public void destroy() {
-
+        System.out.println("Life cycle 3: destroy");
     }
 }
