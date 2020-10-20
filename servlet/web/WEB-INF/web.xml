@@ -44,6 +44,10 @@
         <servlet-name>RequestServlet</servlet-name>
         <servlet-class>servlet.RequestServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ParameterServlet</servlet-name>
+        <servlet-class>servlet.ParameterServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>GreetingServlet</servlet-name>
@@ -72,5 +76,10 @@
     <servlet-mapping>
         <servlet-name>RequestServlet</servlet-name>
         <url-pattern>/request</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>ParameterServlet</servlet-name>
+        <url-pattern>/parameter</url-pattern>
     </servlet-mapping>
 </web-app>
