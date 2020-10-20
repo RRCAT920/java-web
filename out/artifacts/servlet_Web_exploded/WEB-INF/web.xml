@@ -64,6 +64,10 @@
         <servlet-name>IOServlet</servlet-name>
         <servlet-class>servlet.IOServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RedirectServlet</servlet-name>
+        <servlet-class>servlet.RedirectServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>GreetingServlet</servlet-name>
@@ -117,5 +121,10 @@
     <servlet-mapping>
         <servlet-name>IOServlet</servlet-name>
         <url-pattern>/io</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>RedirectServlet</servlet-name>
+        <url-pattern>/redirect</url-pattern>
     </servlet-mapping>
 </web-app>
