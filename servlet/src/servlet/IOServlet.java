@@ -18,8 +18,7 @@ public class IOServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setCharacterEncoding("UTF-8");
-        response.setHeader("Content-Type", "text/html;charset=UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
         var writer = response.getWriter();
         writer.write("你好<br>");
         writer.write("hello");
