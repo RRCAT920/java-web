@@ -60,6 +60,10 @@
         <servlet-name>DispatchServlet</servlet-name>
         <servlet-class>servlet.DispatchServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>IOServlet</servlet-name>
+        <servlet-class>servlet.IOServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>GreetingServlet</servlet-name>
@@ -108,5 +112,10 @@
     <servlet-mapping>
         <servlet-name>DispatchServlet</servlet-name>
         <url-pattern>/dispatch</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>IOServlet</servlet-name>
+        <url-pattern>/io</url-pattern>
     </servlet-mapping>
 </web-app>
