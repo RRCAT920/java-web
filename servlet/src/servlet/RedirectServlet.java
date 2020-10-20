@@ -17,7 +17,9 @@ public class RedirectServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setStatus(302);
-        response.setHeader("Location", "http://localhost:8080/servlet/jump/deep/to.html");
+//        response.setStatus(302);
+//        response.setHeader("Location", "http://localhost:8080/servlet/jump/deep/to.html");
+        // 浏览器解析/为http://ip:port/
+        response.sendRedirect("/servlet/jump/deep/to.html");
     }
 }
