@@ -40,6 +40,10 @@
         <servlet-name>AfterServlet</servlet-name>
         <servlet-class>servlet.AfterServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RequestServlet</servlet-name>
+        <servlet-class>servlet.RequestServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>GreetingServlet</servlet-name>
@@ -64,5 +68,9 @@
     <servlet-mapping>
         <servlet-name>AfterServlet</servlet-name>
         <url-pattern>/after</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RequestServlet</servlet-name>
+        <url-pattern>/request</url-pattern>
     </servlet-mapping>
 </web-app>
