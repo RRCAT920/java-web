@@ -18,7 +18,8 @@ public class DispatchServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //        "/WEB-INF/form.html"
-        var path = "http://www.baidu.com";
+//        http://www.baidu.com
+        var path = "/jump/deep/to.html";
         request.getRequestDispatcher(path).forward(request, response);
     }
 }
