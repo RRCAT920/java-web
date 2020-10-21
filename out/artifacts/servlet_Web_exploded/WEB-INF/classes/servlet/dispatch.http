@@ -1,0 +1,5 @@
+GET http://localhost:8080/servlet/dispatch
+Accept: application/json
+
+###
+http://localhost:8080/servlet/servlet1?userName=lirongrong
