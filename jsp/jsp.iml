@@ -48,7 +48,34 @@
           <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/websocket-api.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="file:///Applications/apache-tomcat-8.5.59-src/java" />
+          <root url="file:///Applications/apache-tomcat-8.5.59-src/modules/jdbc-pool/src/main/java" />
+          <root url="file:///Applications/apache-tomcat-8.5.59-src/modules/jdbc-pool/src/test/java" />
+          <root url="file:///Applications/apache-tomcat-8.5.59-src/test" />
+          <root url="file:///Applications/apache-tomcat-8.5.59-src/webapps/docs/appdev/sample/src" />
+          <root url="file:///Applications/apache-tomcat-8.5.59-src/webapps/examples/WEB-INF/classes" />
+          <root url="file:///Applications/apache-tomcat-8.5.59-src/webapps/examples/WEB-INF/jsp/applet" />
+          <root url="file:///Applications/apache-tomcat-8.5.59-src/webapps/examples/jsp/plugin/applet" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="taglibs-standard-impl-1.2.1">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/taglibs-standard-impl-1.2.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/taglibs-standard-spec-1.2.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/taglibs-standard-1.2.1-source-release.zip!/taglibs-standard-1.2.1/compat/src/main/java" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/taglibs-standard-1.2.1-source-release.zip!/taglibs-standard-1.2.1/impl/src/main/java" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/taglibs-standard-1.2.1-source-release.zip!/taglibs-standard-1.2.1/impl/src/test/java" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/taglibs-standard-1.2.1-source-release.zip!/taglibs-standard-1.2.1/jstlel/src/main/java" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/taglibs-standard-1.2.1-source-release.zip!/taglibs-standard-1.2.1/jstlel/src/test/java" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/taglibs-standard-1.2.1-source-release.zip!/taglibs-standard-1.2.1/spec/src/main/java" />
+          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/taglibs-standard-1.2.1-source-release.zip!/taglibs-standard-1.2.1/standard-test/src/test/java" />
+        </SOURCES>
       </library>
     </orderEntry>
   </component>
