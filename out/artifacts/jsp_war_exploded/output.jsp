@@ -1,16 +1,17 @@
 <%--
   User: huzihao
   Date: 2020/10/22
-  Time: 01:01
+  Time: 00:35
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>主页</title>
+    <title>out和response.getWriter()的区别</title>
 </head>
 <body>
-头部信息<br>
-内容<br>
-<%@ include file="/include/footer.jsp"%>
+<%
+    out.write(12);
+    out.print(12);
+%>
 </body>
 </html>

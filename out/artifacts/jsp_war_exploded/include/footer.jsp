@@ -1,16 +1,14 @@
 <%--
   User: huzihao
   Date: 2020/10/22
-  Time: 01:01
+  Time: 01:02
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>主页</title>
+    <title>脚部</title>
 </head>
 <body>
-头部信息<br>
-内容<br>
-<%@ include file="/include/footer.jsp"%>
+脚部信息<br>
 </body>
 </html>
