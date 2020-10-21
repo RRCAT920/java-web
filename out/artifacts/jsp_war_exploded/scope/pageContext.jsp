@@ -19,8 +19,9 @@ pageContext: <%=pageContext.getAttribute("pageContext")%><br>
 request: <%=request.getAttribute("request")%><br>
 session: <%=session.getAttribute("session")%><br>
 application: <%=application.getAttribute("application")%><br>
-<%
-    request.getRequestDispatcher("/scope/requestContext.jsp").forward(request, response);
-%>
+<%--<%--%>
+<%--    request.getRequestDispatcher("/scope/requestContext.jsp").forward(request, response);--%>
+<%--%>--%>
+<jsp:forward page="/scope/requestContext.jsp"/>
 </body>
 </html>
