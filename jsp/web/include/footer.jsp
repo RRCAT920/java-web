@@ -10,5 +10,7 @@
 </head>
 <body>
 脚部信息<br>
+username: <%=request.getParameter("username")%><br>
+password: <%=request.getParameter("password")%><br>
 </body>
 </html>

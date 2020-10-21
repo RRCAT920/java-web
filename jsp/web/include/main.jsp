@@ -11,6 +11,9 @@
 <body>
 头部信息<br>
 内容<br>
-<%@ include file="/include/footer.jsp"%>
+<jsp:include page="/include/footer.jsp">
+    <jsp:param name="username" value="lirongrong"/>
+    <jsp:param name="password" value="920"/>
+</jsp:include>
 </body>
 </html>
