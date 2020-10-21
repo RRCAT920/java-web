@@ -23,11 +23,8 @@
 </head>
 <body>
 <%
-    List<Student> studentList = new ArrayList<>(10);
-    for (int i = 0; i < 10; i++) {
-        int id = i + 1;
-        studentList.add(new Student(id, "name" + id, 18 + id, "phone" + id));
-    }
+    @SuppressWarnings("unchecked")
+    List<Student> studentList = (List<Student>) request.getAttribute("studentList");
 %>
 <table>
     <tr>
@@ -35,18 +32,26 @@
         <th>姓名</th>
         <th>年龄</th>
         <th>电话号码</th>
+        <th>操作</th>
     </tr>
     <%
-        for (Student student: studentList) {
+        if (studentList != null) {
+            for (Student student : studentList) {
     %>
     <tr>
-        <td><%=student.getId()%></td>
-        <td><%=student.getName()%></td>
-        <td><%=student.getAge()%></td>
-        <td><%=student.getPhone()%></td>
-        <td><%="删除、修改"%></td>
+        <td><%=student.getId()%>
+        </td>
+        <td><%=student.getName()%>
+        </td>
+        <td><%=student.getAge()%>
+        </td>
+        <td><%=student.getPhone()%>
+        </td>
+        <td><%="删除、修改"%>
+        </td>
     </tr>
     <%
+            }
         }
     %>
 </table>

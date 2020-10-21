@@ -7,9 +7,17 @@
         <servlet-name>PrintHtmlServlet</servlet-name>
         <servlet-class>servlet.PrintHtmlServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SearchStudentServlet</servlet-name>
+        <servlet-class>servlet.SearchStudentServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>PrintHtmlServlet</servlet-name>
         <url-pattern>/printHtml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchStudentServlet</servlet-name>
+        <url-pattern>/searchStudent</url-pattern>
     </servlet-mapping>
 </web-app>
