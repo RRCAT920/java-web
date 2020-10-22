@@ -3,6 +3,8 @@ package servlet;
 import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -21,7 +23,8 @@ public class DownloadServlet extends HttpServlet {
         var path = "/file/" + filename;
         var mimeType = servletContext.getMimeType(path);
         resp.setContentType(mimeType);
-        resp.setHeader("Content-Disposition", "attachment;filename=" + filename);
+        resp.setHeader("Content-Disposition", "attachment; filename=" +
+                URLEncoder.encode("你好.jpeg", StandardCharsets.UTF_8));
         try (var in = servletContext.getResourceAsStream(path);
              var out = resp.getOutputStream()) {
             IOUtils.copy(in, out);
