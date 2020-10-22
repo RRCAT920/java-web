@@ -20,6 +20,10 @@
         <servlet-name>SearchStudentServlet</servlet-name>
         <servlet-class>servlet.SearchStudentServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>servlet.UploadServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>PrintHtmlServlet</servlet-name>
@@ -28,6 +32,10 @@
     <servlet-mapping>
         <servlet-name>SearchStudentServlet</servlet-name>
         <url-pattern>/searchStudent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/upload</url-pattern>
     </servlet-mapping>
     
     <listener>
