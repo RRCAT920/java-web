@@ -29,12 +29,15 @@ public class DownloadServlet extends HttpServlet {
         var headerValueStrBuilder = new StringBuilder("attachment; filename");
         var UserAgentValue = req.getHeader("User-Agent");
         if (UserAgentValue.contains("Chrome")) {
+            // IE/chrome/新版firefox : filename=filename
             headerValueStrBuilder.append("=")
                     .append(URLEncoder.encode(downloadFileName, StandardCharsets.UTF_8));
         } else if (UserAgentValue.contains("Safari")) {
+            // safari/chrome : filename*=UTF-8''filename
             headerValueStrBuilder.append("*=UTF-8''")
                     .append(URLEncoder.encode(downloadFileName, StandardCharsets.UTF_8));
         } else if (UserAgentValue.contains("Firefox")) {
+            // 旧版firefox/chrome: filename==?charset?B?filename?=
             headerValueStrBuilder.append("=")
                     .append("=?UTF-8?B?")
                     .append(Base64.getEncoder()
@@ -44,17 +47,6 @@ public class DownloadServlet extends HttpServlet {
             throw new ServletException("不支持此浏览器");
         }
         resp.setHeader("Content-Disposition", headerValueStrBuilder.toString());
-        // IE和chrome和新版firefox
-//        resp.setHeader("Content-Disposition", "attachment; filename=" +
-//                URLEncoder.encode("你好.jpeg", StandardCharsets.UTF_8));
-        // safari和chrome
-//        resp.setHeader("Content-Disposition", "attachment; filename*=UTF-8''" +
-//                URLEncoder.encode("你好.jpeg", StandardCharsets.UTF_8));
-        // 旧版firefox和 chrome
-//        var encodeString = Base64.getEncoder()
-//                .encodeToString("你好.jpeg".getBytes(StandardCharsets.UTF_8));
-//        resp.setHeader("Content-Disposition", "attachment; filename==?UTF-8?B?%s?="
-//                .formatted(encodeString));
         try (var in = servletContext.getResourceAsStream(path);
              var out = resp.getOutputStream()) {
             IOUtils.copy(in, out);
