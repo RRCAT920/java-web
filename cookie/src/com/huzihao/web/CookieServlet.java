@@ -26,8 +26,13 @@ public class CookieServlet extends BaseServlet {
             throws ServletException, IOException {
         // 创建Cookie对象
         var cookie = new Cookie("key1", "value1");
+        var cookie2 = new Cookie("key2", "value2");
+        var cookie3 = new Cookie("key3", "value3");
+
         // 通知客户端保存Cookie
         resp.addCookie(cookie);
+        resp.addCookie(cookie2);
+        resp.addCookie(cookie3);
 
         resp.getWriter().print("Cookie创建成功");
     }
@@ -43,7 +48,7 @@ public class CookieServlet extends BaseServlet {
             throws ServletException, IOException {
         var cookies = req.getCookies();
         for (var cookie : cookies) {
-            resp.getWriter().println("Cookie[%s=%s]".formatted(cookie.getName(), cookie.getValue()));
+            resp.getWriter().print("Cookie[%s=%s]<br>".formatted(cookie.getName(), cookie.getValue()));
         }
     }
 
@@ -79,5 +84,40 @@ public class CookieServlet extends BaseServlet {
             cookie.setValue("newValue2");
             resp.addCookie(cookie);
         }
+    }
+
+    protected void defaultLife(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        var cookie = new Cookie("defaultLife", "defaultLife");
+        cookie.setMaxAge(-1);
+        resp.addCookie(cookie);
+    }
+
+    protected void deleteNow(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        var cookie = CookieUtils.find("key2", req.getCookies());
+        if (null != cookie) {
+            cookie.setMaxAge(0);
+            resp.addCookie(cookie);
+        }
+    }
+
+    protected void live1Hour(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        var cookie = CookieUtils.find("key1", req.getCookies());
+        if (null != cookie) {
+            cookie.setMaxAge(3600);
+            resp.addCookie(cookie);
+        }
+    }
+
+
+    protected void testPath(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        var cookie = new Cookie("path1", "path1");
+        cookie.setPath(req.getContextPath() + "/abc");
+        resp.addCookie(cookie);
+
+        resp.getWriter().print("创建了一个带有有效路径的Cookie");
     }
 }
