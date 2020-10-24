@@ -59,6 +59,7 @@ public class SessionServlet extends BaseServlet {
             throws ServletException, IOException {
         var session = req.getSession();
         var cookie = CookieUtils.find("JSESSIONID", req.getCookies());
+        // 设置cookie的生命周期
         cookie.setMaxAge(session.getMaxInactiveInterval());
         resp.addCookie(cookie);
     }
