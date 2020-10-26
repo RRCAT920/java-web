@@ -9,6 +9,18 @@
         <filter-name>AdminFilter</filter-name>
         <!--        配置全类名-->
         <filter-class>com.huzihao.filter.AdminFilter</filter-class>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>root</param-value>
+        </init-param>
+    </filter>
+    <filter>
+        <filter-name>Filter1</filter-name>
+        <filter-class>com.huzihao.filter.Filter1</filter-class>
+    </filter>
+    <filter>
+        <filter-name>Filter2</filter-name>
+        <filter-class>com.huzihao.filter.Filter2</filter-class>
     </filter>
 
     <filter-mapping>
@@ -26,4 +38,13 @@
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+
+    <filter-mapping>
+        <filter-name>Filter1</filter-name>
+        <url-pattern>/target.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>Filter2</filter-name>
+        <url-pattern>/target.jsp</url-pattern>
+    </filter-mapping>
 </web-app>

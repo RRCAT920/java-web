@@ -15,8 +15,14 @@ import javax.servlet.http.HttpServletRequest;
  * @since 2020/10/26 20:56
  */
 public class AdminFilter implements Filter {
+
+    public AdminFilter() {
+        System.out.println("1.ctor of Filter");
+    }
+
     @Override
     public void destroy() {
+        System.out.println("4.destroy of Filter");
     }
 
     /**
@@ -31,6 +37,7 @@ public class AdminFilter implements Filter {
     @Override
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
             throws ServletException, IOException {
+        System.out.println("3.doFilter of Filter");
         var session = ((HttpServletRequest) req).getSession();
         var user = session.getAttribute("user");
         if (null == user) {
@@ -44,7 +51,13 @@ public class AdminFilter implements Filter {
 
     @Override
     public void init(FilterConfig config) throws ServletException {
+        System.out.println("2.init of Filter");
 
+        System.out.println("-------------Config---------------");
+        System.out.println("filter-name: " + config.getFilterName());
+        System.out.printf("init-param: [%s=%s]%n", "username", config.getInitParameter("username"));
+        System.out.println("ServletContext object: " + config.getServletContext());
+        System.out.println("---------------------------------");
     }
 
 }

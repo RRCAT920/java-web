@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ThreadLocal/ThreadLocal.iml" filepath="$PROJECT_DIR$/ThreadLocal/ThreadLocal.iml" />
       <module fileurl="file://$PROJECT_DIR$/cookie/cookie.iml" filepath="$PROJECT_DIR$/cookie/cookie.iml" />
       <module fileurl="file://$PROJECT_DIR$/filter/filter.iml" filepath="$PROJECT_DIR$/filter/filter.iml" />
       <module fileurl="file://$PROJECT_DIR$/front/front.iml" filepath="$PROJECT_DIR$/front/front.iml" />
