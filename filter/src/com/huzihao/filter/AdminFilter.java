@@ -37,7 +37,7 @@ public class AdminFilter implements Filter {
             req.getRequestDispatcher("/login.jsp").forward(req, resp);
             System.out.println("拦截");
         } else {
-            // 放行
+            // 让程序继续进行，访问目标资源
             chain.doFilter(req, resp);
         }
     }
