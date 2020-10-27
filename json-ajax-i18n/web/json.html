@@ -23,19 +23,22 @@
                     "key6_1_1": 1,
                     "key6_1_2": 2
                 },
-                {
-                    "key6_2_1": 1,
-                    "key6_2_2": 2
-                }
-            ]
-        }
-        alert(typeof jsonObj)
-        // json的访问
-        console.log(jsonObj.key1)
-        // json对象转字符串
-        console.log(JSON.stringify(jsonObj));
-        // json字符串转json对象
-    </script>
+				{
+					"key6_2_1": 1,
+					"key6_2_2": 2
+				}
+			]
+		}
+		alert(typeof jsonObj)
+		// json的访问
+		console.log(jsonObj.key1)
+		// json对象转字符串
+		let jsonStr = JSON.stringify(jsonObj)
+		console.log(jsonStr)
+		// json字符串转json对象
+		let jsonO = JSON.parse(jsonStr)
+		console.log(jsonO)
+	</script>
 </head>
 <body>
 
