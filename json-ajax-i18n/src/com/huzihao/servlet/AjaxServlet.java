@@ -16,6 +16,19 @@ import javax.servlet.http.HttpServletResponse;
 public class AjaxServlet extends BaseServlet {
     protected void jsAjax(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+        System.out.println("js");
+        var person = new Person(1, "李容蓉");
+        var gson = new Gson();
+        var personJsonStr = gson.toJson(person);
+        resp.getWriter().write(personJsonStr);
+    }
+
+    protected void jqAjax(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        System.out.println("jq");
+        var username = req.getParameter("username");
+        System.out.println(username);
+
         var person = new Person(1, "李容蓉");
         var gson = new Gson();
         var personJsonStr = gson.toJson(person);
